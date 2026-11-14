@@ -1,9 +1,244 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Page-1" id="4uU09y8fyz5pkj35gI_2">
-    <mxGraphModel>
+    <mxGraphModel dx="2644" dy="-40" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <UserObject label="" plantUmlData="{&#xa;  &quot;data&quot;: &quot;\n@startuml\ntitle Medical Representative Manager - Doctor List Management\n\nleft to right direction\n\nskinparam backgroundColor #F8FAFC\nskinparam shadowing false\nskinparam actorStyle awesome\nskinparam roundcorner 18\nskinparam packageStyle rectangle\nskinparam packageBackgroundColor #EAF2F8\nskinparam packageBorderColor #4F6D8A\nskinparam packagePadding 25\nskinparam defaultFontName Arial\nskinparam linetype ortho\n\nskinparam usecase {\n    BackgroundColor #FFFFFF\n    BorderColor #4F6D8A\n    ArrowColor #4F6D8A\n    FontColor #263746\n}\n\nskinparam note {\n    BackgroundColor #FFFDF2\n    BorderColor #C9B77D\n    FontColor #454545\n}\n\nactor \&quot;Medical Representative\\nManager\&quot; as Manager\n\nrectangle \&quot;Doctor List Management\&quot; {\n\n    package \&quot;Managed Medical Representatives&#39; Doctor Lists\&quot; {\n\n        usecase \&quot;View Medical Representatives&#39;\\nDoctor Lists\&quot; as UC01\n        usecase \&quot;View Doctor List\&quot; as UC02\n        usecase \&quot;Add Doctor to\\nDoctor List\&quot; as UC03\n        usecase \&quot;View Doctor Profile\&quot; as UC04\n        usecase \&quot;Update Doctor Information\&quot; as UC05\n        usecase \&quot;Remove Doctor from\\nDoctor List\&quot; as UC06\n    }\n}\n\n&#39; Manager Permissions\nManager -left-&gt; UC01\nManager -left-&gt; UC02\nManager -left-&gt; UC03\nManager -left-&gt; UC04\nManager -left-&gt; UC05\nManager -left-&gt; UC06\n\n&#39; Manager Access Validation\nnote right of UC01\n  **Access Validation**\n  - The Manager can only access\n    lists belonging to Medical\n    Representatives under their management.\n  - Access to other Managers&#39; lists\n    is not permitted.\nend note\n\n&#39; Add Doctor Validation\nnote right of UC03\n  **Add Doctor Validation**\n  - The selected Medical Representative\n    must belong to the Manager&#39;s team.\n  - Required doctor information must\n    be provided.\n  - Input data must follow the\n    accepted field formats.\n  - Prevent duplicate doctor entries\n    in the same list.\nend note\n\n&#39; View Doctor Validation\nnote bottom of UC04\n  **Profile Access Validation**\n  - The doctor must belong to a list\n    accessible by the Manager.\n  - The Manager can only view profiles\n    within their management scope.\nend note\n\n&#39; Update Doctor Validation\nnote bottom of UC05\n  **Update Validation**\n  - The doctor must belong to a\n    managed Medical Representative&#39;s list.\n  - Updated required fields must not\n    be empty.\n  - Updated values must follow\n    the accepted field formats.\nend note\n\n&#39; Remove Doctor Validation\nnote bottom of UC06\n  **Removal Validation**\n  - The doctor must belong to a\n    managed Medical Representative&#39;s list.\n  - The system asks for confirmation\n    before removal.\n  - Removal affects the selected\n    doctor list only.\nend note\n\n&#39; General List Validation\nnote bottom of UC02\n  **List Access Validation**\n  - Only lists of assigned Medical\n    Representatives can be displayed.\n  - The Manager cannot access\n    unauthorized lists.\nend note\n\n@enduml\n&quot;,&#xa;  &quot;config&quot;: null&#xa;}" id="4wsWQGd7lSl79x3RH9Tt-24">
+          <mxCell connectable="0" parent="1" style="group;transparentBounds=1;editIcon=1;lockedGroup=0;groupPadding=10;" vertex="1">
+            <mxGeometry as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;b&gt;Access Validation&lt;/b&gt;&lt;br&gt;- The Manager can only access&lt;br&gt;lists belonging to Medical&lt;br&gt;Representatives under their management.&lt;br&gt;- Access to other Managers&#39; lists&lt;br&gt;is not permitted." plantUmlId="note_16" plantUmlBaseStyle="shape=note;size=10;fillColor=#FFFDF2;strokeColor=#C9B77D;fontSize=13;whiteSpace=wrap;align=left;spacingLeft=4;rounded=1;arcSize=18;absoluteArcSize=1;shadow=0;fontColor=#454545;fontFamily=Arial;html=1;" plantUmlBaseValue="&lt;b&gt;Access Validation&lt;/b&gt;&lt;br&gt;- The Manager can only access&lt;br&gt;lists belonging to Medical&lt;br&gt;Representatives under their management.&lt;br&gt;- Access to other Managers&#39; lists&lt;br&gt;is not permitted." id="4wsWQGd7lSl79x3RH9Tt-41">
+          <mxCell parent="4wsWQGd7lSl79x3RH9Tt-24" style="shape=note;size=10;fillColor=#FFFDF2;strokeColor=#C9B77D;fontSize=13;whiteSpace=wrap;align=left;spacingLeft=4;rounded=1;arcSize=18;absoluteArcSize=1;shadow=0;fontColor=#454545;fontFamily=Arial;html=1;" vertex="1">
+            <mxGeometry height="102" width="285" x="940" y="1710" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlData="{&#xa;  &quot;data&quot;: &quot;\n@startuml\ntitle Medical Representative Manager - Doctor List Management\n\nleft to right direction\n\nskinparam backgroundColor #F8FAFC\nskinparam shadowing false\nskinparam actorStyle awesome\nskinparam roundcorner 18\nskinparam packageStyle rectangle\nskinparam packageBackgroundColor #EAF2F8\nskinparam packageBorderColor #4F6D8A\nskinparam packagePadding 25\nskinparam defaultFontName Arial\nskinparam linetype ortho\n\nskinparam usecase {\n    BackgroundColor #FFFFFF\n    BorderColor #4F6D8A\n    ArrowColor #4F6D8A\n    FontColor #263746\n}\n\nactor \&quot;Medical Representative\\nManager\&quot; as Manager\n\nrectangle \&quot;Doctor List Management\&quot; {\n\n    package \&quot;Doctor List Operations\&quot; {\n\n        usecase \&quot;View Medical Representatives&#39;\\nDoctor Lists\&quot; as UC01\n        usecase \&quot;View Doctor List\&quot; as UC02\n        usecase \&quot;Add Doctor to\\nDoctor List\&quot; as UC03\n        usecase \&quot;View Doctor Profile\&quot; as UC04\n        usecase \&quot;Update Doctor Information\&quot; as UC05\n        usecase \&quot;Remove Doctor from\\nDoctor List\&quot; as UC06\n    }\n\n    package \&quot;Access &amp; Data Validations\&quot; {\n\n        usecase \&quot;Validate Manager&#39;s\\nTeam Access\&quot; as V01\n        usecase \&quot;Validate Doctor\\nInformation\&quot; as V02\n        usecase \&quot;Check for Duplicate\\nDoctor Entry\&quot; as V03\n        usecase \&quot;Validate Doctor List\\nOwnership\&quot; as V04\n        usecase \&quot;Validate Updated\\nDoctor Information\&quot; as V05\n        usecase \&quot;Confirm Doctor\\nRemoval\&quot; as V06\n    }\n\n    &#39; Mandatory Validations\n    UC01 ..&gt; V01 : &lt;&lt;include&gt;&gt;\n    UC02 ..&gt; V01 : &lt;&lt;include&gt;&gt;\n    UC03 ..&gt; V01 : &lt;&lt;include&gt;&gt;\n    UC03 ..&gt; V02 : &lt;&lt;include&gt;&gt;\n    UC03 ..&gt; V03 : &lt;&lt;include&gt;&gt;\n    UC04 ..&gt; V04 : &lt;&lt;include&gt;&gt;\n    UC05 ..&gt; V04 : &lt;&lt;include&gt;&gt;\n    UC05 ..&gt; V05 : &lt;&lt;include&gt;&gt;\n    UC06 ..&gt; V04 : &lt;&lt;include&gt;&gt;\n    UC06 ..&gt; V06 : &lt;&lt;include&gt;&gt;\n}\n\n&#39; Manager Associations\nManager -left-&gt; UC01\nManager -left-&gt; UC02\nManager -left-&gt; UC03\nManager -left-&gt; UC04\nManager -left-&gt; UC05\nManager -left-&gt; UC06\n\n@enduml\n&quot;,&#xa;  &quot;config&quot;: null&#xa;}" id="4wsWQGd7lSl79x3RH9Tt-54">
+          <mxCell connectable="0" parent="1" style="group;transparentBounds=1;editIcon=1;lockedGroup=0;groupPadding=10;" vertex="1">
+            <mxGeometry as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Doctor List Management" plantUmlId="rect_0" plantUmlBaseStyle="swimlane;collapsible=0;startSize=26;fillColor=none;strokeColor=#181818;fontColor=#000000;fontSize=13;fontStyle=1;whiteSpace=wrap;rounded=1;arcSize=18;absoluteArcSize=1;shadow=0;fontFamily=Arial;" plantUmlBaseValue="Doctor List Management" id="4wsWQGd7lSl79x3RH9Tt-55">
+          <mxCell parent="4wsWQGd7lSl79x3RH9Tt-54" style="swimlane;collapsible=0;startSize=26;fillColor=none;strokeColor=#181818;fontColor=#000000;fontSize=13;fontStyle=1;whiteSpace=wrap;rounded=1;arcSize=18;absoluteArcSize=1;shadow=0;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="624" width="740" x="130" y="1626" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Doctor List Operations" plantUmlId="rect_13" plantUmlBaseStyle="shape=folder;tabWidth=198;tabHeight=22;tabPosition=left;html=1;fillColor=#EAF2F8;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;fontStyle=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=1;container=1;collapsible=0;rounded=1;arcSize=18;absoluteArcSize=1;shadow=0;fontFamily=Arial;" plantUmlBaseValue="Doctor List Operations" id="4wsWQGd7lSl79x3RH9Tt-68">
+          <mxCell parent="4wsWQGd7lSl79x3RH9Tt-55" style="shape=folder;tabWidth=198;tabHeight=22;tabPosition=left;html=1;fillColor=#EAF2F8;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;fontStyle=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=1;container=1;collapsible=0;rounded=1;arcSize=18;absoluteArcSize=1;shadow=0;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="570" width="626" x="60" y="34" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="View Medical Representatives&#39;&lt;br&gt;Doctor Lists" plantUmlId="uc_14" plantUmlBaseStyle="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#4F6D8A;whiteSpace=wrap;fontColor=#263746;fontSize=14;rounded=1;arcSize=18;absoluteArcSize=1;shadow=0;fontFamily=Arial;" plantUmlBaseValue="View Medical Representatives&#39;&lt;br&gt;Doctor Lists" id="4wsWQGd7lSl79x3RH9Tt-69">
+          <mxCell parent="4wsWQGd7lSl79x3RH9Tt-68" style="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#4F6D8A;whiteSpace=wrap;fontColor=#263746;fontSize=14;rounded=1;arcSize=18;absoluteArcSize=1;shadow=0;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="60" width="157" x="39.75" y="59" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="View Medical Representative List" plantUmlId="uc_15" plantUmlBaseStyle="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#4F6D8A;whiteSpace=wrap;fontColor=#263746;fontSize=14;rounded=1;arcSize=18;absoluteArcSize=1;shadow=0;fontFamily=Arial;" plantUmlBaseValue="View Doctor List" id="4wsWQGd7lSl79x3RH9Tt-70">
+          <mxCell parent="4wsWQGd7lSl79x3RH9Tt-68" style="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#4F6D8A;whiteSpace=wrap;fontColor=#263746;fontSize=14;rounded=1;arcSize=18;absoluteArcSize=1;shadow=0;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="52" width="157" x="39.75" y="150" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Add Doctor to&lt;br&gt;Doctor List" plantUmlId="uc_16" plantUmlBaseStyle="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#4F6D8A;whiteSpace=wrap;fontColor=#263746;fontSize=14;rounded=1;arcSize=18;absoluteArcSize=1;shadow=0;fontFamily=Arial;" plantUmlBaseValue="Add Doctor to&lt;br&gt;Doctor List" id="4wsWQGd7lSl79x3RH9Tt-71">
+          <mxCell parent="4wsWQGd7lSl79x3RH9Tt-68" style="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#4F6D8A;whiteSpace=wrap;fontColor=#263746;fontSize=14;rounded=1;arcSize=18;absoluteArcSize=1;shadow=0;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="52" width="166.75" x="30" y="242" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="View Doctor Profile" plantUmlId="uc_17" plantUmlBaseStyle="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#4F6D8A;whiteSpace=wrap;fontColor=#263746;fontSize=14;rounded=1;arcSize=18;absoluteArcSize=1;shadow=0;fontFamily=Arial;" plantUmlBaseValue="View Doctor Profile" id="4wsWQGd7lSl79x3RH9Tt-72">
+          <mxCell parent="4wsWQGd7lSl79x3RH9Tt-68" style="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#4F6D8A;whiteSpace=wrap;fontColor=#263746;fontSize=14;rounded=1;arcSize=18;absoluteArcSize=1;shadow=0;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="38" width="166.75" x="34.88" y="380" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Check for Duplicate&lt;br&gt;Doctor Entry" plantUmlId="uc_23" plantUmlBaseStyle="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#4F6D8A;whiteSpace=wrap;fontColor=#263746;fontSize=14;rounded=1;arcSize=18;absoluteArcSize=1;shadow=0;fontFamily=Arial;" plantUmlBaseValue="Check for Duplicate&lt;br&gt;Doctor Entry" id="4wsWQGd7lSl79x3RH9Tt-78">
+          <mxCell parent="4wsWQGd7lSl79x3RH9Tt-68" style="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#4F6D8A;whiteSpace=wrap;fontColor=#263746;fontSize=14;rounded=1;arcSize=18;absoluteArcSize=1;shadow=0;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="52" width="176.75" x="388.88" y="190" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="«include»" plantUmlId="rel_33" plantUmlBaseStyle="endArrow=open;dashed=1;dashPattern=5 5;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontFamily=Arial;verticalAlign=bottom;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="«include»" id="4wsWQGd7lSl79x3RH9Tt-88">
+          <mxCell edge="1" parent="4wsWQGd7lSl79x3RH9Tt-68" source="4wsWQGd7lSl79x3RH9Tt-71" style="endArrow=open;dashed=1;dashPattern=5 5;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontFamily=Arial;verticalAlign=bottom;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="4wsWQGd7lSl79x3RH9Tt-78">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="113.4" y="210" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Remove Doctor from&lt;br&gt;Doctor List" plantUmlId="uc_19" plantUmlBaseStyle="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#4F6D8A;whiteSpace=wrap;fontColor=#263746;fontSize=14;rounded=1;arcSize=18;absoluteArcSize=1;shadow=0;fontFamily=Arial;" plantUmlBaseValue="Remove Doctor from&lt;br&gt;Doctor List" id="4wsWQGd7lSl79x3RH9Tt-74">
+          <mxCell parent="4wsWQGd7lSl79x3RH9Tt-68" style="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#4F6D8A;whiteSpace=wrap;fontColor=#263746;fontSize=14;rounded=1;arcSize=18;absoluteArcSize=1;shadow=0;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="52" width="176.75" x="39.75" y="460" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Confirm Doctor&lt;br&gt;Removal" plantUmlId="uc_26" plantUmlBaseStyle="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#4F6D8A;whiteSpace=wrap;fontColor=#263746;fontSize=14;rounded=1;arcSize=18;absoluteArcSize=1;shadow=0;fontFamily=Arial;" plantUmlBaseValue="Confirm Doctor&lt;br&gt;Removal" id="4wsWQGd7lSl79x3RH9Tt-81">
+          <mxCell parent="4wsWQGd7lSl79x3RH9Tt-68" style="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#4F6D8A;whiteSpace=wrap;fontColor=#263746;fontSize=14;rounded=1;arcSize=18;absoluteArcSize=1;shadow=0;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="52" width="153" x="388.88" y="460" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="«include»" plantUmlId="rel_38" plantUmlBaseStyle="endArrow=open;dashed=1;dashPattern=5 5;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontFamily=Arial;verticalAlign=bottom;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="«include»" id="4wsWQGd7lSl79x3RH9Tt-93">
+          <mxCell edge="1" parent="4wsWQGd7lSl79x3RH9Tt-68" source="4wsWQGd7lSl79x3RH9Tt-74" style="endArrow=open;dashed=1;dashPattern=5 5;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontFamily=Arial;verticalAlign=bottom;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="4wsWQGd7lSl79x3RH9Tt-81">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="View MedRep Actual Progress" plantUmlId="uc_15" plantUmlBaseStyle="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#4F6D8A;whiteSpace=wrap;fontColor=#263746;fontSize=14;rounded=1;arcSize=18;absoluteArcSize=1;shadow=0;fontFamily=Arial;" plantUmlBaseValue="View Doctor List" id="4wsWQGd7lSl79x3RH9Tt-108">
+          <mxCell parent="4wsWQGd7lSl79x3RH9Tt-68" style="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#4F6D8A;whiteSpace=wrap;fontColor=#263746;fontSize=14;rounded=1;arcSize=18;absoluteArcSize=1;shadow=0;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="52" width="157" x="231.88" y="110" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="«Extend»" plantUmlId="rel_29" plantUmlBaseStyle="endArrow=open;dashed=1;dashPattern=5 5;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontFamily=Arial;verticalAlign=bottom;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="«include»" id="4wsWQGd7lSl79x3RH9Tt-110">
+          <mxCell edge="1" parent="4wsWQGd7lSl79x3RH9Tt-68" style="endArrow=open;dashed=1;dashPattern=5 5;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontFamily=Arial;verticalAlign=bottom;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="4wsWQGd7lSl79x3RH9Tt-108">
+            <mxGeometry relative="1" x="0.041" as="geometry">
+              <Array as="points">
+                <mxPoint x="153.9" y="136" />
+              </Array>
+              <mxPoint x="153.88" y="150" as="sourcePoint" />
+              <mxPoint x="388.88" y="150" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="«include»" plantUmlId="rel_31" plantUmlBaseStyle="endArrow=open;dashed=1;dashPattern=5 5;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontFamily=Arial;verticalAlign=bottom;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="«include»" id="4wsWQGd7lSl79x3RH9Tt-101">
+          <mxCell edge="1" parent="4wsWQGd7lSl79x3RH9Tt-55" source="4wsWQGd7lSl79x3RH9Tt-72" style="endArrow=open;dashed=1;dashPattern=5 5;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontFamily=Arial;verticalAlign=bottom;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;">
+            <mxGeometry relative="1" x="-0.3231" as="geometry">
+              <Array as="points">
+                <mxPoint x="256.8" y="433" />
+                <mxPoint x="256.8" y="434" />
+                <mxPoint x="650" y="434" />
+              </Array>
+              <mxPoint x="256.75" y="368" as="sourcePoint" />
+              <mxPoint x="650" y="154" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="«include»" plantUmlId="rel_31" plantUmlBaseStyle="endArrow=open;dashed=1;dashPattern=5 5;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontFamily=Arial;verticalAlign=bottom;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="«include»" id="4wsWQGd7lSl79x3RH9Tt-105">
+          <mxCell edge="1" parent="4wsWQGd7lSl79x3RH9Tt-55" source="4wsWQGd7lSl79x3RH9Tt-71" style="endArrow=open;dashed=1;dashPattern=5 5;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontFamily=Arial;verticalAlign=bottom;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;exitX=1;exitY=1;exitDx=0;exitDy=0;">
+            <mxGeometry relative="1" x="-0.0574" y="10" as="geometry">
+              <mxPoint as="offset" />
+              <Array as="points">
+                <mxPoint x="232.2" y="384" />
+                <mxPoint x="650" y="384" />
+              </Array>
+              <mxPoint x="256.75" y="368" as="sourcePoint" />
+              <mxPoint x="650" y="144" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Validate Doctor&lt;br&gt;Information" plantUmlId="uc_22" plantUmlBaseStyle="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#4F6D8A;whiteSpace=wrap;fontColor=#263746;fontSize=14;rounded=1;arcSize=18;absoluteArcSize=1;shadow=0;fontFamily=Arial;" plantUmlBaseValue="Validate Doctor&lt;br&gt;Information" id="4wsWQGd7lSl79x3RH9Tt-77">
+          <mxCell parent="4wsWQGd7lSl79x3RH9Tt-55" style="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#4F6D8A;whiteSpace=wrap;fontColor=#263746;fontSize=14;rounded=1;arcSize=18;absoluteArcSize=1;shadow=0;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="52" width="157" x="450" y="286" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="4wsWQGd7lSl79x3RH9Tt-104" edge="1" parent="4wsWQGd7lSl79x3RH9Tt-55" source="4wsWQGd7lSl79x3RH9Tt-71" style="endArrow=open;dashed=1;dashPattern=5 5;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontFamily=Arial;verticalAlign=bottom;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="4wsWQGd7lSl79x3RH9Tt-77" value="">
+          <mxGeometry relative="1" x="-0.1234" as="geometry">
+            <Array as="points">
+              <mxPoint x="370" y="314" />
+              <mxPoint x="370" y="314" />
+            </Array>
+            <mxPoint x="447" y="1962" as="sourcePoint" />
+            <mxPoint x="840" y="1812" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <UserObject label="Validate Manager&#39;s&lt;br&gt;Team Access" plantUmlId="uc_21" plantUmlBaseStyle="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#4F6D8A;whiteSpace=wrap;fontColor=#263746;fontSize=14;rounded=1;arcSize=18;absoluteArcSize=1;shadow=0;fontFamily=Arial;" plantUmlBaseValue="Validate Manager&#39;s&lt;br&gt;Team Access" id="4wsWQGd7lSl79x3RH9Tt-76">
+          <mxCell parent="4wsWQGd7lSl79x3RH9Tt-55" style="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#4F6D8A;whiteSpace=wrap;fontColor=#263746;fontSize=14;rounded=1;arcSize=18;absoluteArcSize=1;shadow=0;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="52" width="194" x="492" y="97" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="«include»" plantUmlId="rel_29" plantUmlBaseStyle="endArrow=open;dashed=1;dashPattern=5 5;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontFamily=Arial;verticalAlign=bottom;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="«include»" id="4wsWQGd7lSl79x3RH9Tt-84">
+          <mxCell edge="1" parent="4wsWQGd7lSl79x3RH9Tt-55" source="4wsWQGd7lSl79x3RH9Tt-69" style="endArrow=open;dashed=1;dashPattern=5 5;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontFamily=Arial;verticalAlign=bottom;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="4wsWQGd7lSl79x3RH9Tt-76">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="«include»" plantUmlId="rel_30" plantUmlBaseStyle="endArrow=open;dashed=1;dashPattern=5 5;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontFamily=Arial;verticalAlign=bottom;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="«include»" id="4wsWQGd7lSl79x3RH9Tt-85">
+          <mxCell edge="1" parent="4wsWQGd7lSl79x3RH9Tt-55" source="4wsWQGd7lSl79x3RH9Tt-70" style="endArrow=open;dashed=1;dashPattern=5 5;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontFamily=Arial;verticalAlign=bottom;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="4wsWQGd7lSl79x3RH9Tt-76">
+            <mxGeometry relative="1" x="-0.1486" as="geometry">
+              <Array as="points">
+                <mxPoint x="650" y="210" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="«include»" plantUmlId="rel_31" plantUmlBaseStyle="endArrow=open;dashed=1;dashPattern=5 5;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontFamily=Arial;verticalAlign=bottom;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="«include»" id="4wsWQGd7lSl79x3RH9Tt-111">
+          <mxCell edge="1" parent="4wsWQGd7lSl79x3RH9Tt-55" source="4wsWQGd7lSl79x3RH9Tt-74" style="endArrow=open;dashed=1;dashPattern=5 5;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontFamily=Arial;verticalAlign=bottom;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;">
+            <mxGeometry relative="1" x="-0.4038" as="geometry">
+              <Array as="points">
+                <mxPoint x="256.8" y="484" />
+                <mxPoint x="650" y="484" />
+              </Array>
+              <mxPoint x="261.95" y="423" as="sourcePoint" />
+              <mxPoint x="649.95" y="144" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <mxCell id="4wsWQGd7lSl79x3RH9Tt-107" edge="1" parent="4wsWQGd7lSl79x3RH9Tt-54" source="4wsWQGd7lSl79x3RH9Tt-82" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;" target="4wsWQGd7lSl79x3RH9Tt-74">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="150" y="1905" />
+              <mxPoint x="150" y="2146" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <UserObject label="" plantUmlId="actor_27" plantUmlBaseStyle="shape=umlActor;html=1;fillColor=#F1F1F1;strokeColor=#181818;fontColor=#000000;fontSize=14;rounded=1;arcSize=18;absoluteArcSize=1;shadow=0;fontFamily=Arial;" plantUmlBaseValue="" id="4wsWQGd7lSl79x3RH9Tt-82">
+          <mxCell parent="4wsWQGd7lSl79x3RH9Tt-54" style="shape=umlActor;html=1;fillColor=#F1F1F1;strokeColor=#181818;fontColor=#000000;fontSize=14;rounded=1;arcSize=18;absoluteArcSize=1;shadow=0;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="60" width="40" x="10" y="1875" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Medical Representative&#xa;Manager" plantUmlId="actorlbl_28" plantUmlBaseStyle="text;html=1;align=center;verticalAlign=middle;spacingBottom=1;fontColor=#000000;fontSize=14;part=1;fontFamily=Arial;" plantUmlBaseValue="Medical Representative&#xa;Manager" id="4wsWQGd7lSl79x3RH9Tt-83">
+          <mxCell parent="4wsWQGd7lSl79x3RH9Tt-82" style="text;html=1;align=center;verticalAlign=middle;spacingBottom=1;fontColor=#000000;fontSize=14;part=1;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="17" width="248" x="-104" y="62" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="rel_39" plantUmlBaseStyle="endArrow=block;endFill=1;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="4wsWQGd7lSl79x3RH9Tt-94">
+          <mxCell edge="1" parent="4wsWQGd7lSl79x3RH9Tt-54" source="4wsWQGd7lSl79x3RH9Tt-82" style="endArrow=block;endFill=1;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="4wsWQGd7lSl79x3RH9Tt-69">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="150" y="1905" />
+                <mxPoint x="150" y="1758" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="rel_40" plantUmlBaseStyle="endArrow=block;endFill=1;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="4wsWQGd7lSl79x3RH9Tt-95">
+          <mxCell edge="1" parent="4wsWQGd7lSl79x3RH9Tt-54" source="4wsWQGd7lSl79x3RH9Tt-82" style="endArrow=block;endFill=1;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="4wsWQGd7lSl79x3RH9Tt-70">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="150" y="1905" />
+                <mxPoint x="150" y="1837" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="rel_41" plantUmlBaseStyle="endArrow=block;endFill=1;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="4wsWQGd7lSl79x3RH9Tt-96">
+          <mxCell edge="1" parent="4wsWQGd7lSl79x3RH9Tt-54" source="4wsWQGd7lSl79x3RH9Tt-82" style="endArrow=block;endFill=1;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="4wsWQGd7lSl79x3RH9Tt-71">
+            <mxGeometry relative="1" x="0.658" as="geometry">
+              <Array as="points">
+                <mxPoint x="150" y="1905" />
+                <mxPoint x="150" y="1928" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="rel_42" plantUmlBaseStyle="endArrow=block;endFill=1;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=1.37;exitPerimeter=0;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="4wsWQGd7lSl79x3RH9Tt-97">
+          <mxCell edge="1" parent="4wsWQGd7lSl79x3RH9Tt-54" source="4wsWQGd7lSl79x3RH9Tt-82" style="endArrow=block;endFill=1;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;exitX=0.5;exitY=0.5;exitPerimeter=0;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;exitDx=0;exitDy=0;" target="4wsWQGd7lSl79x3RH9Tt-72">
+            <mxGeometry relative="1" x="0.1867" as="geometry">
+              <Array as="points">
+                <mxPoint x="150" y="1905" />
+                <mxPoint x="150" y="2059" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Medical Representative Manager - Doctor List Management" plantUmlId="title_0" plantUmlBaseStyle="text;html=1;fillColor=none;strokeColor=none;fontSize=14;fontStyle=1;fontColor=#000000;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;" plantUmlBaseValue="Medical Representative Manager - Doctor List Management" id="4wsWQGd7lSl79x3RH9Tt-100">
+          <mxCell parent="4wsWQGd7lSl79x3RH9Tt-54" style="text;html=1;fillColor=none;strokeColor=none;fontSize=14;fontStyle=1;fontColor=#000000;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="24" width="439" x="280.5" y="1570" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="noteln_17" plantUmlBaseStyle="endArrow=none;dashed=1;html=1;strokeColor=#4F6D8A;fontFamily=Arial;curved=1;rounded=0;endSize=6;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="4wsWQGd7lSl79x3RH9Tt-42">
+          <mxCell edge="1" parent="1" source="4wsWQGd7lSl79x3RH9Tt-76" style="endArrow=none;dashed=1;html=1;strokeColor=#4F6D8A;fontFamily=Arial;curved=0;rounded=0;endSize=6;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="4wsWQGd7lSl79x3RH9Tt-41">
+            <mxGeometry relative="1" x="0.3237" as="geometry">
+              <Array as="points">
+                <mxPoint x="890" y="1749" />
+              </Array>
+              <mxPoint x="533.5" y="872" as="sourcePoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
       </root>
     </mxGraphModel>
   </diagram>
