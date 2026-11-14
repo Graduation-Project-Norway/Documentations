@@ -1,9 +1,151 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Page-1" id="BCV-VYC_t0sv1SuXaNTb">
-    <mxGraphModel>
+    <mxGraphModel dx="2091" dy="677" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <UserObject label="" plantUmlData="{&#xa;  &quot;data&quot;: &quot;\n@startuml\ntitle Medical Representative - Promotional Inventory &amp; Gift Management\n\nleft to right direction\n\nskinparam backgroundColor #F8FAFC\nskinparam shadowing false\nskinparam actorStyle awesome\nskinparam roundcorner 15\nskinparam packageStyle rectangle\nskinparam packageBackgroundColor #EAF2F8\nskinparam packageBorderColor #4F6D8A\nskinparam usecase {\n    BackgroundColor #F8FAFC\n    BorderColor #4F6D8A\n    ArrowColor #4F6D8A\n}\nskinparam defaultFontName Arial\nskinparam packagePadding 20\n\nactor \&quot;Medical Representative\&quot; as MedRep\nactor \&quot;Warehouse Staff\&quot; as Warehouse\nactor \&quot;Sales Manager\&quot; as SalesManager\n\nrectangle \&quot;Promotional Inventory &amp; Gift Management\&quot; {\n\n    usecase \&quot;Submit Promotional\\nCustody Request\&quot; as UC13\n    usecase \&quot;Record Promotional\\nItem Delivery\&quot; as UC14\n    usecase \&quot;Update MedRep\\nPromotional Custody\&quot; as UC15\n\n    usecase \&quot;Submit Special &amp;\\nExperiential Gift Request\&quot; as UC16\n    usecase \&quot;Review Special\\nGift Requests\&quot; as UC17\n    usecase \&quot;Approve Special\\nGift Request\&quot; as UC18\n    usecase \&quot;Reject Special\\nGift Request\&quot; as UC19\n\n    UC14 ..&gt; UC15 : &lt;&lt;include&gt;&gt;\n    UC18 ..&gt; UC17 : &lt;&lt;extend&gt;&gt;\n    UC19 ..&gt; UC17 : &lt;&lt;extend&gt;&gt;\n}\n\nMedRep --&gt; UC13\nMedRep --&gt; UC16\n\nWarehouse --&gt; UC14\n\nSalesManager --&gt; UC17\nSalesManager --&gt; UC18\nSalesManager --&gt; UC19\n\nnote right of UC15\n  MedRep custody is updated\n  after request approval and\n  promotional item delivery.\n\n  Custody deductions are recorded\n  after verified GPS clinic visits.\nend note\n\nnote right of UC17\n  Special and experiential gifts\n  include customized physical items\n  and non-material gifts such as trips.\n\n  These requests are tracked\n  administratively only.\n\n  They do not affect warehouse\n  stock or MedRep custody.\nend note\n\n@enduml\n&quot;,&#xa;  &quot;config&quot;: null&#xa;}" id="8Xc3hnH6fMIMHupg4c5Y-1">
+          <mxCell connectable="0" parent="1" style="group;transparentBounds=1;editIcon=1;lockedGroup=0;groupPadding=10;" vertex="1">
+            <mxGeometry as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Promotional Inventory &amp; Gift Management" plantUmlId="rect_0" plantUmlBaseStyle="swimlane;collapsible=0;startSize=26;fillColor=none;strokeColor=#181818;fontColor=#000000;fontSize=13;fontStyle=1;whiteSpace=wrap;rounded=1;arcSize=15;absoluteArcSize=1;shadow=0;fontFamily=Arial;" plantUmlBaseValue="Promotional Inventory &amp; Gift Management" id="8Xc3hnH6fMIMHupg4c5Y-2">
+          <mxCell parent="8Xc3hnH6fMIMHupg4c5Y-1" style="swimlane;collapsible=0;startSize=26;fillColor=none;strokeColor=#181818;fontColor=#000000;fontSize=13;fontStyle=1;whiteSpace=wrap;rounded=1;arcSize=15;absoluteArcSize=1;shadow=0;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="487" width="523" x="150" y="64" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Submit Promotional&lt;br&gt;Custody Request" plantUmlId="uc_1" plantUmlBaseStyle="ellipse;html=1;fillColor=#F8FAFC;strokeColor=#4F6D8A;whiteSpace=wrap;fontColor=#000000;fontSize=14;rounded=1;arcSize=15;absoluteArcSize=1;shadow=0;fontFamily=Arial;" plantUmlBaseValue="Submit Promotional&lt;br&gt;Custody Request" id="8Xc3hnH6fMIMHupg4c5Y-3">
+          <mxCell parent="8Xc3hnH6fMIMHupg4c5Y-2" style="ellipse;html=1;fillColor=#F8FAFC;strokeColor=#4F6D8A;whiteSpace=wrap;fontColor=#000000;fontSize=14;rounded=1;arcSize=15;absoluteArcSize=1;shadow=0;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="52" width="199" x="42" y="46" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Submit Special &amp;amp;&lt;br&gt;Experiential Gift Request" plantUmlId="uc_2" plantUmlBaseStyle="ellipse;html=1;fillColor=#F8FAFC;strokeColor=#4F6D8A;whiteSpace=wrap;fontColor=#000000;fontSize=14;rounded=1;arcSize=15;absoluteArcSize=1;shadow=0;fontFamily=Arial;" plantUmlBaseValue="Submit Special &amp;amp;&lt;br&gt;Experiential Gift Request" id="8Xc3hnH6fMIMHupg4c5Y-4">
+          <mxCell parent="8Xc3hnH6fMIMHupg4c5Y-2" style="ellipse;html=1;fillColor=#F8FAFC;strokeColor=#4F6D8A;whiteSpace=wrap;fontColor=#000000;fontSize=14;rounded=1;arcSize=15;absoluteArcSize=1;shadow=0;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="53" width="243" x="20" y="138" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Record Promotional&lt;br&gt;Item Delivery" plantUmlId="uc_3" plantUmlBaseStyle="ellipse;html=1;fillColor=#F8FAFC;strokeColor=#4F6D8A;whiteSpace=wrap;fontColor=#000000;fontSize=14;rounded=1;arcSize=15;absoluteArcSize=1;shadow=0;fontFamily=Arial;" plantUmlBaseValue="Record Promotional&lt;br&gt;Item Delivery" id="8Xc3hnH6fMIMHupg4c5Y-5">
+          <mxCell parent="8Xc3hnH6fMIMHupg4c5Y-2" style="ellipse;html=1;fillColor=#F8FAFC;strokeColor=#4F6D8A;whiteSpace=wrap;fontColor=#000000;fontSize=14;rounded=1;arcSize=15;absoluteArcSize=1;shadow=0;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="52" width="198" x="42.5" y="231" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Approve Special&lt;br&gt;Gift Request" plantUmlId="uc_4" plantUmlBaseStyle="ellipse;html=1;fillColor=#F8FAFC;strokeColor=#4F6D8A;whiteSpace=wrap;fontColor=#000000;fontSize=14;rounded=1;arcSize=15;absoluteArcSize=1;shadow=0;fontFamily=Arial;" plantUmlBaseValue="Approve Special&lt;br&gt;Gift Request" id="8Xc3hnH6fMIMHupg4c5Y-6">
+          <mxCell parent="8Xc3hnH6fMIMHupg4c5Y-2" style="ellipse;html=1;fillColor=#F8FAFC;strokeColor=#4F6D8A;whiteSpace=wrap;fontColor=#000000;fontSize=14;rounded=1;arcSize=15;absoluteArcSize=1;shadow=0;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="52" width="165" x="260" y="316" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Reject Special&lt;br&gt;Gift Request" plantUmlId="uc_5" plantUmlBaseStyle="ellipse;html=1;fillColor=#F8FAFC;strokeColor=#4F6D8A;whiteSpace=wrap;fontColor=#000000;fontSize=14;rounded=1;arcSize=15;absoluteArcSize=1;shadow=0;fontFamily=Arial;" plantUmlBaseValue="Reject Special&lt;br&gt;Gift Request" id="8Xc3hnH6fMIMHupg4c5Y-7">
+          <mxCell parent="8Xc3hnH6fMIMHupg4c5Y-2" style="ellipse;html=1;fillColor=#F8FAFC;strokeColor=#4F6D8A;whiteSpace=wrap;fontColor=#000000;fontSize=14;rounded=1;arcSize=15;absoluteArcSize=1;shadow=0;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="52" width="148" x="268.5" y="406" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Update MedRep&lt;br&gt;Promotional Custody" plantUmlId="uc_6" plantUmlBaseStyle="ellipse;html=1;fillColor=#F8FAFC;strokeColor=#4F6D8A;whiteSpace=wrap;fontColor=#000000;fontSize=14;rounded=1;arcSize=15;absoluteArcSize=1;shadow=0;fontFamily=Arial;" plantUmlBaseValue="Update MedRep&lt;br&gt;Promotional Custody" id="8Xc3hnH6fMIMHupg4c5Y-8">
+          <mxCell parent="8Xc3hnH6fMIMHupg4c5Y-2" style="ellipse;html=1;fillColor=#F8FAFC;strokeColor=#4F6D8A;whiteSpace=wrap;fontColor=#000000;fontSize=14;rounded=1;arcSize=15;absoluteArcSize=1;shadow=0;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="52" width="205" x="298" y="226" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Review Special&lt;br&gt;Gift Requests" plantUmlId="uc_7" plantUmlBaseStyle="ellipse;html=1;fillColor=#F8FAFC;strokeColor=#4F6D8A;whiteSpace=wrap;fontColor=#000000;fontSize=14;rounded=1;arcSize=15;absoluteArcSize=1;shadow=0;fontFamily=Arial;" plantUmlBaseValue="Review Special&lt;br&gt;Gift Requests" id="8Xc3hnH6fMIMHupg4c5Y-9">
+          <mxCell parent="8Xc3hnH6fMIMHupg4c5Y-2" style="ellipse;html=1;fillColor=#F8FAFC;strokeColor=#4F6D8A;whiteSpace=wrap;fontColor=#000000;fontSize=14;rounded=1;arcSize=15;absoluteArcSize=1;shadow=0;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="52" width="158" x="10" y="336" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="«include»" plantUmlId="rel_14" plantUmlBaseStyle="endArrow=open;dashed=1;dashPattern=5 5;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;edgeStyle=none;rounded=0;html=1;fontFamily=Arial;verticalAlign=bottom;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="«include»" id="8Xc3hnH6fMIMHupg4c5Y-16">
+          <mxCell edge="1" parent="8Xc3hnH6fMIMHupg4c5Y-2" source="8Xc3hnH6fMIMHupg4c5Y-5" style="endArrow=open;dashed=1;dashPattern=5 5;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;edgeStyle=none;rounded=0;html=1;fontFamily=Arial;verticalAlign=bottom;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="8Xc3hnH6fMIMHupg4c5Y-8">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="«extend»" plantUmlId="rel_15" plantUmlBaseStyle="endArrow=open;dashed=1;dashPattern=5 5;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;edgeStyle=none;rounded=0;html=1;fontFamily=Arial;verticalAlign=bottom;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="«extend»" id="8Xc3hnH6fMIMHupg4c5Y-17">
+          <mxCell edge="1" parent="8Xc3hnH6fMIMHupg4c5Y-2" source="8Xc3hnH6fMIMHupg4c5Y-6" style="endArrow=open;dashed=1;dashPattern=5 5;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;edgeStyle=none;rounded=0;html=1;fontFamily=Arial;verticalAlign=bottom;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="8Xc3hnH6fMIMHupg4c5Y-9">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="«extend»" plantUmlId="rel_16" plantUmlBaseStyle="endArrow=open;dashed=1;dashPattern=5 5;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;edgeStyle=none;rounded=0;html=1;fontFamily=Arial;verticalAlign=bottom;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="«extend»" id="8Xc3hnH6fMIMHupg4c5Y-18">
+          <mxCell edge="1" parent="8Xc3hnH6fMIMHupg4c5Y-2" source="8Xc3hnH6fMIMHupg4c5Y-7" style="endArrow=open;dashed=1;dashPattern=5 5;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;edgeStyle=none;rounded=0;html=1;fontFamily=Arial;verticalAlign=bottom;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="8Xc3hnH6fMIMHupg4c5Y-9">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="actor_8" plantUmlBaseStyle="shape=umlActor;html=1;fillColor=#F1F1F1;strokeColor=#181818;fontColor=#000000;fontSize=14;rounded=1;arcSize=15;absoluteArcSize=1;shadow=0;fontFamily=Arial;" plantUmlBaseValue="" id="8Xc3hnH6fMIMHupg4c5Y-10">
+          <mxCell parent="8Xc3hnH6fMIMHupg4c5Y-1" style="shape=umlActor;html=1;fillColor=#F1F1F1;strokeColor=#181818;fontColor=#000000;fontSize=14;rounded=1;arcSize=15;absoluteArcSize=1;shadow=0;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="60" width="40" x="30" y="143" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Medical Representative" plantUmlId="actorlbl_9" plantUmlBaseStyle="text;html=1;align=center;verticalAlign=middle;spacingBottom=1;fontColor=#000000;fontSize=14;part=1;fontFamily=Arial;" plantUmlBaseValue="Medical Representative" id="8Xc3hnH6fMIMHupg4c5Y-11">
+          <mxCell parent="8Xc3hnH6fMIMHupg4c5Y-10" style="text;html=1;align=center;verticalAlign=middle;spacingBottom=1;fontColor=#000000;fontSize=14;part=1;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="17" width="171" x="-65.5" y="62" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="actor_10" plantUmlBaseStyle="shape=umlActor;html=1;fillColor=#F1F1F1;strokeColor=#181818;fontColor=#000000;fontSize=14;rounded=1;arcSize=15;absoluteArcSize=1;shadow=0;fontFamily=Arial;" plantUmlBaseValue="" id="8Xc3hnH6fMIMHupg4c5Y-12">
+          <mxCell parent="8Xc3hnH6fMIMHupg4c5Y-1" style="shape=umlActor;html=1;fillColor=#F1F1F1;strokeColor=#181818;fontColor=#000000;fontSize=14;rounded=1;arcSize=15;absoluteArcSize=1;shadow=0;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="60" width="40" x="30" y="291" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Warehouse Staff" plantUmlId="actorlbl_11" plantUmlBaseStyle="text;html=1;align=center;verticalAlign=middle;spacingBottom=1;fontColor=#000000;fontSize=14;part=1;fontFamily=Arial;" plantUmlBaseValue="Warehouse Staff" id="8Xc3hnH6fMIMHupg4c5Y-13">
+          <mxCell parent="8Xc3hnH6fMIMHupg4c5Y-12" style="text;html=1;align=center;verticalAlign=middle;spacingBottom=1;fontColor=#000000;fontSize=14;part=1;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="17" width="122" x="-41" y="62" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="actor_12" plantUmlBaseStyle="shape=umlActor;html=1;fillColor=#F1F1F1;strokeColor=#181818;fontColor=#000000;fontSize=14;rounded=1;arcSize=15;absoluteArcSize=1;shadow=0;fontFamily=Arial;" plantUmlBaseValue="" id="8Xc3hnH6fMIMHupg4c5Y-14">
+          <mxCell parent="8Xc3hnH6fMIMHupg4c5Y-1" style="shape=umlActor;html=1;fillColor=#F1F1F1;strokeColor=#181818;fontColor=#000000;fontSize=14;rounded=1;arcSize=15;absoluteArcSize=1;shadow=0;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="60" width="40" x="30" y="389" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Sales Manager" plantUmlId="actorlbl_13" plantUmlBaseStyle="text;html=1;align=center;verticalAlign=middle;spacingBottom=1;fontColor=#000000;fontSize=14;part=1;fontFamily=Arial;" plantUmlBaseValue="Sales Manager" id="8Xc3hnH6fMIMHupg4c5Y-15">
+          <mxCell parent="8Xc3hnH6fMIMHupg4c5Y-14" style="text;html=1;align=center;verticalAlign=middle;spacingBottom=1;fontColor=#000000;fontSize=14;part=1;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="17" width="110" x="-35" y="62" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="rel_17" plantUmlBaseStyle="endArrow=block;endFill=1;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;edgeStyle=none;rounded=0;html=1;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="8Xc3hnH6fMIMHupg4c5Y-19">
+          <mxCell edge="1" parent="8Xc3hnH6fMIMHupg4c5Y-1" source="8Xc3hnH6fMIMHupg4c5Y-10" style="endArrow=block;endFill=1;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;edgeStyle=none;rounded=0;html=1;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="8Xc3hnH6fMIMHupg4c5Y-3">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="rel_18" plantUmlBaseStyle="endArrow=block;endFill=1;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;edgeStyle=none;rounded=0;html=1;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="8Xc3hnH6fMIMHupg4c5Y-20">
+          <mxCell edge="1" parent="8Xc3hnH6fMIMHupg4c5Y-1" source="8Xc3hnH6fMIMHupg4c5Y-10" style="endArrow=block;endFill=1;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;edgeStyle=none;rounded=0;html=1;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="8Xc3hnH6fMIMHupg4c5Y-4">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="rel_19" plantUmlBaseStyle="endArrow=block;endFill=1;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;edgeStyle=none;rounded=0;html=1;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="8Xc3hnH6fMIMHupg4c5Y-21">
+          <mxCell edge="1" parent="8Xc3hnH6fMIMHupg4c5Y-1" source="8Xc3hnH6fMIMHupg4c5Y-12" style="endArrow=block;endFill=1;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;edgeStyle=none;rounded=0;html=1;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="8Xc3hnH6fMIMHupg4c5Y-5">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="rel_20" plantUmlBaseStyle="endArrow=block;endFill=1;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;edgeStyle=none;rounded=0;html=1;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="8Xc3hnH6fMIMHupg4c5Y-22">
+          <mxCell edge="1" parent="8Xc3hnH6fMIMHupg4c5Y-1" source="8Xc3hnH6fMIMHupg4c5Y-14" style="endArrow=block;endFill=1;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;edgeStyle=none;rounded=0;html=1;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="8Xc3hnH6fMIMHupg4c5Y-9">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="MedRep custody is updated&#xa;after request approval and&#xa;promotional item delivery.&#xa;&#xa;Custody deductions are recorded&#xa;after verified GPS clinic visits." plantUmlId="note_23" plantUmlBaseStyle="shape=note;size=10;fillColor=#FEFFDD;strokeColor=#181818;fontSize=13;whiteSpace=wrap;align=left;spacingLeft=4;rounded=1;arcSize=15;absoluteArcSize=1;shadow=0;fontFamily=Arial;" plantUmlBaseValue="MedRep custody is updated&#xa;after request approval and&#xa;promotional item delivery.&#xa;&#xa;Custody deductions are recorded&#xa;after verified GPS clinic visits." id="8Xc3hnH6fMIMHupg4c5Y-25">
+          <mxCell parent="8Xc3hnH6fMIMHupg4c5Y-1" style="shape=note;size=10;fillColor=#FEFFDD;strokeColor=#181818;fontSize=13;whiteSpace=wrap;align=left;spacingLeft=4;rounded=1;arcSize=15;absoluteArcSize=1;shadow=0;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="102" width="228" x="740" y="261" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="noteln_24" plantUmlBaseStyle="endArrow=none;dashed=1;html=1;strokeColor=#4F6D8A;fontFamily=Arial;curved=1;rounded=0;endSize=6;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="8Xc3hnH6fMIMHupg4c5Y-26">
+          <mxCell edge="1" parent="8Xc3hnH6fMIMHupg4c5Y-1" source="8Xc3hnH6fMIMHupg4c5Y-8" style="endArrow=none;dashed=1;html=1;strokeColor=#4F6D8A;fontFamily=Arial;curved=0;rounded=0;endSize=6;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="8Xc3hnH6fMIMHupg4c5Y-25">
+            <mxGeometry relative="1" x="0.8458" as="geometry">
+              <Array as="points" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Special and experiential gifts&#xa;include customized physical items&#xa;and non-material gifts such as trips.&#xa;&#xa;These requests are tracked&#xa;administratively only.&#xa;&#xa;They do not affect warehouse&#xa;stock." plantUmlId="note_25" plantUmlBaseStyle="shape=note;size=10;fillColor=#FEFFDD;strokeColor=#181818;fontSize=13;whiteSpace=wrap;align=left;spacingLeft=4;rounded=1;arcSize=15;absoluteArcSize=1;shadow=0;fontFamily=Arial;" plantUmlBaseValue="Special and experiential gifts&#xa;include customized physical items&#xa;and non-material gifts such as trips.&#xa;&#xa;These requests are tracked&#xa;administratively only.&#xa;&#xa;They do not affect warehouse&#xa;stock or MedRep custody." id="8Xc3hnH6fMIMHupg4c5Y-27">
+          <mxCell parent="8Xc3hnH6fMIMHupg4c5Y-1" style="shape=note;size=10;fillColor=#FEFFDD;strokeColor=#181818;fontSize=13;whiteSpace=wrap;align=left;spacingLeft=4;rounded=1;arcSize=15;absoluteArcSize=1;shadow=0;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="148" width="250" x="140" y="570" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="noteln_26" plantUmlBaseStyle="endArrow=none;dashed=1;html=1;strokeColor=#4F6D8A;fontFamily=Arial;curved=1;rounded=0;endSize=6;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="8Xc3hnH6fMIMHupg4c5Y-28">
+          <mxCell edge="1" parent="8Xc3hnH6fMIMHupg4c5Y-1" source="8Xc3hnH6fMIMHupg4c5Y-9" style="endArrow=none;dashed=1;html=1;strokeColor=#4F6D8A;fontFamily=Arial;curved=0;rounded=0;endSize=6;fontSize=11;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;entryX=0.41;entryY=0.036;entryDx=0;entryDy=0;entryPerimeter=0;" target="8Xc3hnH6fMIMHupg4c5Y-27">
+            <mxGeometry relative="1" x="-0.0209" as="geometry">
+              <Array as="points">
+                <mxPoint x="240" y="520" />
+                <mxPoint x="240" y="580" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Medical Representative - Promotional Inventory &amp;amp; Gift Management" plantUmlId="title_0" plantUmlBaseStyle="text;html=1;fillColor=none;strokeColor=none;fontSize=14;fontStyle=1;fontColor=#000000;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;" plantUmlBaseValue="Medical Representative - Promotional Inventory &amp;amp; Gift Management" id="8Xc3hnH6fMIMHupg4c5Y-29">
+          <mxCell parent="8Xc3hnH6fMIMHupg4c5Y-1" style="text;html=1;fillColor=none;strokeColor=none;fontSize=14;fontStyle=1;fontColor=#000000;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="24" width="500" x="323.25" y="30" as="geometry" />
+          </mxCell>
+        </UserObject>
       </root>
     </mxGraphModel>
   </diagram>
