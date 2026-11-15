@@ -1,0 +1,111 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="v5KIs-TvLSTnLEi-Xos8">
+    <mxGraphModel dx="1956" dy="653" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject label="" plantUmlData="{&#xa;  &quot;data&quot;: &quot;\n@startuml\ntitle Medical Representative - AI Visit Planning &amp; Pre-Call Advisory\n\nleft to right direction\n\nskinparam backgroundColor #F8FAFC\nskinparam shadowing false\nskinparam actorStyle awesome\nskinparam roundcorner 18\nskinparam packageStyle rectangle\nskinparam packageBackgroundColor #EAF2F8\nskinparam packageBorderColor #4F6D8A\nskinparam packagePadding 25\nskinparam defaultFontName Arial\nskinparam linetype ortho\n\nskinparam usecase {\n    BackgroundColor #FFFFFF\n    BorderColor #4F6D8A\n    ArrowColor #4F6D8A\n    FontColor #263746\n}\n\nskinparam note {\n    BackgroundColor #FFFDF2\n    BorderColor #C9B77D\n    FontColor #454545\n}\n\nactor \&quot;Medical Representative\&quot; as MedRep\n\nrectangle \&quot;AI Visit Planning &amp; Pre-Call Advisory\&quot; {\n\n    package \&quot;01 - AI Visit Planning\&quot; {\n\n        usecase \&quot;Generate Monthly\\nVisit Plan\&quot; as UC08\n        usecase \&quot;Review Monthly\\nVisit Plan\&quot; as UC09\n        usecase \&quot;Modify Visit Plan\&quot; as UC10\n\n        UC10 ..&gt; UC09 : &lt;&lt;extend&gt;&gt;\n    }\n\n    package \&quot;02 - AI Pre-Call Advisory\&quot; {\n\n        usecase \&quot;Generate AI Pre-Call\\nRecommendations\&quot; as UC12\n        usecase \&quot;Review AI Pre-Call\\nRecommendations\&quot; as UC13\n    }\n}\n\nactor \&quot;AI Service\&quot; as AI\n\n&#39; Medical Representative\nMedRep -left-&gt; UC09\nMedRep -left-&gt; UC13\n\n&#39; AI Service\nAI -right-&gt; UC08\nAI -right-&gt; UC12\n\n&#39; &#39; Notes\n&#39; note right of UC08\n&#39;   **Monthly Planning**\n&#39;   The plan is divided into three cycles.\n\n&#39;   The AI considers:\n&#39;   - Doctor classification (A/B/C)\n&#39;   - Required visit frequency\n&#39;   - Fixed visit days\n&#39;   - Geographic locations\n\n&#39;   Every assigned doctor must be\n&#39;   included in each cycle, with\n&#39;   repeated visits when required.\n\n&#39;   Unclassified doctors receive\n&#39;   suggested visit dates based on\n&#39;   available fixed days and location.\n&#39; end note\n\n&#39; note right of UC12\n&#39;   **Recommendation Inputs**\n&#39;   - Doctor profile and specialty\n&#39;   - Doctor classification\n&#39;   - Previous visit history\n&#39;   - Previous feedback and objections\n&#39;   - Registered company product database\n&#39;   - MedRep&#39;s available promotional custody\n\n&#39;   **For Unclassified Doctors**\n&#39;   - Specialty discovery questions\n&#39;   - Introductory gift suggestions\n\n&#39;   **For Classified Doctors**\n&#39;   - Personalized talking points\n&#39;   - Feedback and objection analysis\n&#39;   - Product recommendations\n&#39;   - Product features to highlight\n&#39;   - Promotional item recommendations\n&#39; end note\n\n&#39; note bottom of UC10\n&#39;   The MedRep can manually modify\n&#39;   the generated monthly visit plan.\n&#39; end note\n\n@enduml\n&quot;,&#xa;  &quot;config&quot;: null&#xa;}" id="SGYwsJkY14Erd2L5TeL--1">
+          <mxCell connectable="0" parent="1" style="group;transparentBounds=1;editIcon=1;lockedGroup=0;groupPadding=10;" vertex="1">
+            <mxGeometry as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="AI Visit Planning &amp; Pre-Call Advisory" plantUmlId="rect_0" plantUmlBaseStyle="swimlane;collapsible=0;startSize=26;fillColor=none;strokeColor=#181818;fontColor=#000000;fontSize=13;fontStyle=1;whiteSpace=wrap;rounded=1;arcSize=18;absoluteArcSize=1;shadow=0;fontFamily=Arial;" plantUmlBaseValue="AI Visit Planning &amp; Pre-Call Advisory" id="SGYwsJkY14Erd2L5TeL--2">
+          <mxCell parent="SGYwsJkY14Erd2L5TeL--1" style="swimlane;collapsible=0;startSize=26;fillColor=none;strokeColor=#181818;fontColor=#000000;fontSize=13;fontStyle=1;whiteSpace=wrap;rounded=1;arcSize=18;absoluteArcSize=1;shadow=0;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="464" width="876.5" x="150" y="76" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="01 - AI Visit Planning" plantUmlId="rect_1" plantUmlBaseStyle="shape=folder;tabWidth=193;tabHeight=22;tabPosition=left;html=1;fillColor=#EAF2F8;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;fontStyle=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=1;container=1;collapsible=0;rounded=1;arcSize=18;absoluteArcSize=1;shadow=0;fontFamily=Arial;" plantUmlBaseValue="01 - AI Visit Planning" id="SGYwsJkY14Erd2L5TeL--3">
+          <mxCell parent="SGYwsJkY14Erd2L5TeL--2" style="shape=folder;tabWidth=193;tabHeight=22;tabPosition=left;html=1;fillColor=#EAF2F8;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;fontStyle=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=1;container=1;collapsible=0;rounded=1;arcSize=18;absoluteArcSize=1;shadow=0;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="215" width="423" x="50" y="44" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Generate Monthly&lt;br&gt;Visit Plan" plantUmlId="uc_2" plantUmlBaseStyle="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#4F6D8A;whiteSpace=wrap;fontColor=#263746;fontSize=14;rounded=1;arcSize=18;absoluteArcSize=1;shadow=0;fontFamily=Arial;" plantUmlBaseValue="Generate Monthly&lt;br&gt;Visit Plan" id="SGYwsJkY14Erd2L5TeL--4">
+          <mxCell parent="SGYwsJkY14Erd2L5TeL--3" style="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#4F6D8A;whiteSpace=wrap;fontColor=#263746;fontSize=14;rounded=1;arcSize=18;absoluteArcSize=1;shadow=0;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="52" width="181" x="20" y="68" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Modify Visit Plan" plantUmlId="uc_3" plantUmlBaseStyle="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#4F6D8A;whiteSpace=wrap;fontColor=#263746;fontSize=14;rounded=1;arcSize=18;absoluteArcSize=1;shadow=0;fontFamily=Arial;" plantUmlBaseValue="Modify Visit Plan" id="SGYwsJkY14Erd2L5TeL--5">
+          <mxCell parent="SGYwsJkY14Erd2L5TeL--3" style="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#4F6D8A;whiteSpace=wrap;fontColor=#263746;fontSize=14;rounded=1;arcSize=18;absoluteArcSize=1;shadow=0;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="35" width="151" x="244" y="33" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Review Monthly&lt;br&gt;Visit Plan" plantUmlId="uc_4" plantUmlBaseStyle="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#4F6D8A;whiteSpace=wrap;fontColor=#263746;fontSize=14;rounded=1;arcSize=18;absoluteArcSize=1;shadow=0;fontFamily=Arial;" plantUmlBaseValue="Review Monthly&lt;br&gt;Visit Plan" id="SGYwsJkY14Erd2L5TeL--6">
+          <mxCell parent="SGYwsJkY14Erd2L5TeL--3" style="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#4F6D8A;whiteSpace=wrap;fontColor=#263746;fontSize=14;rounded=1;arcSize=18;absoluteArcSize=1;shadow=0;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="52" width="167" x="236" y="105.5" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="«extend»" plantUmlId="rel_12" plantUmlBaseStyle="endArrow=open;dashed=1;dashPattern=5 5;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontFamily=Arial;verticalAlign=bottom;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="«extend»" id="SGYwsJkY14Erd2L5TeL--14">
+          <mxCell edge="1" parent="SGYwsJkY14Erd2L5TeL--3" source="SGYwsJkY14Erd2L5TeL--5" style="endArrow=open;dashed=1;dashPattern=5 5;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontFamily=Arial;verticalAlign=bottom;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="SGYwsJkY14Erd2L5TeL--6">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="02 - AI Pre-Call Advisory" plantUmlId="rect_5" plantUmlBaseStyle="shape=folder;tabWidth=223;tabHeight=22;tabPosition=left;html=1;fillColor=#EAF2F8;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;fontStyle=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=1;container=1;collapsible=0;rounded=1;arcSize=18;absoluteArcSize=1;shadow=0;fontFamily=Arial;" plantUmlBaseValue="02 - AI Pre-Call Advisory" id="SGYwsJkY14Erd2L5TeL--7">
+          <mxCell parent="SGYwsJkY14Erd2L5TeL--2" style="shape=folder;tabWidth=223;tabHeight=22;tabPosition=left;html=1;fillColor=#EAF2F8;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;fontStyle=1;align=left;verticalAlign=top;spacingLeft=6;spacingTop=1;container=1;collapsible=0;rounded=1;arcSize=18;absoluteArcSize=1;shadow=0;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="232" width="249" x="570" y="164" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Review AI Pre-Call&lt;br&gt;Recommendations" plantUmlId="uc_6" plantUmlBaseStyle="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#4F6D8A;whiteSpace=wrap;fontColor=#263746;fontSize=14;rounded=1;arcSize=18;absoluteArcSize=1;shadow=0;fontFamily=Arial;" plantUmlBaseValue="Review AI Pre-Call&lt;br&gt;Recommendations" id="SGYwsJkY14Erd2L5TeL--8">
+          <mxCell parent="SGYwsJkY14Erd2L5TeL--7" style="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#4F6D8A;whiteSpace=wrap;fontColor=#263746;fontSize=14;rounded=1;arcSize=18;absoluteArcSize=1;shadow=0;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="52" width="194" x="27.5" y="68" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Generate AI Pre-Call&lt;br&gt;Recommendations" plantUmlId="uc_7" plantUmlBaseStyle="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#4F6D8A;whiteSpace=wrap;fontColor=#263746;fontSize=14;rounded=1;arcSize=18;absoluteArcSize=1;shadow=0;fontFamily=Arial;" plantUmlBaseValue="Generate AI Pre-Call&lt;br&gt;Recommendations" id="SGYwsJkY14Erd2L5TeL--9">
+          <mxCell parent="SGYwsJkY14Erd2L5TeL--7" style="ellipse;html=1;fillColor=#FFFFFF;strokeColor=#4F6D8A;whiteSpace=wrap;fontColor=#263746;fontSize=14;rounded=1;arcSize=18;absoluteArcSize=1;shadow=0;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="52" width="209" x="20" y="160" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="rel_16" plantUmlBaseStyle="endArrow=block;endFill=1;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="SGYwsJkY14Erd2L5TeL--18">
+          <mxCell edge="1" parent="SGYwsJkY14Erd2L5TeL--2" style="endArrow=block;endFill=1;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="-68.5" y="350" />
+              </Array>
+              <mxPoint x="-68.5" y="366" as="sourcePoint" />
+              <mxPoint x="591.5" y="350" as="targetPoint" />
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="actor_8" plantUmlBaseStyle="shape=umlActor;html=1;fillColor=#F1F1F1;strokeColor=#181818;fontColor=#000000;fontSize=14;rounded=1;arcSize=18;absoluteArcSize=1;shadow=0;fontFamily=Arial;" plantUmlBaseValue="" id="SGYwsJkY14Erd2L5TeL--10">
+          <mxCell parent="SGYwsJkY14Erd2L5TeL--1" style="shape=umlActor;html=1;fillColor=#F1F1F1;strokeColor=#181818;fontColor=#000000;fontSize=14;rounded=1;arcSize=18;absoluteArcSize=1;shadow=0;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="60" width="40" x="40" y="286" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Medical Representative" plantUmlId="actorlbl_9" plantUmlBaseStyle="text;html=1;align=center;verticalAlign=middle;spacingBottom=1;fontColor=#000000;fontSize=14;part=1;fontFamily=Arial;" plantUmlBaseValue="Medical Representative" id="SGYwsJkY14Erd2L5TeL--11">
+          <mxCell parent="SGYwsJkY14Erd2L5TeL--10" style="text;html=1;align=center;verticalAlign=middle;spacingBottom=1;fontColor=#000000;fontSize=14;part=1;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="17" width="171" x="-65.5" y="62" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="actor_10" plantUmlBaseStyle="shape=umlActor;html=1;fillColor=#F1F1F1;strokeColor=#181818;fontColor=#000000;fontSize=14;rounded=1;arcSize=18;absoluteArcSize=1;shadow=0;fontFamily=Arial;" plantUmlBaseValue="" id="SGYwsJkY14Erd2L5TeL--12">
+          <mxCell parent="SGYwsJkY14Erd2L5TeL--1" style="shape=umlActor;html=1;fillColor=#F1F1F1;strokeColor=#181818;fontColor=#000000;fontSize=14;rounded=1;arcSize=18;absoluteArcSize=1;shadow=0;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="60" width="40" x="40" y="410" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="AI Service" plantUmlId="actorlbl_11" plantUmlBaseStyle="text;html=1;align=center;verticalAlign=middle;spacingBottom=1;fontColor=#000000;fontSize=14;part=1;fontFamily=Arial;" plantUmlBaseValue="AI Service" id="SGYwsJkY14Erd2L5TeL--13">
+          <mxCell parent="SGYwsJkY14Erd2L5TeL--12" style="text;html=1;align=center;verticalAlign=middle;spacingBottom=1;fontColor=#000000;fontSize=14;part=1;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="17" width="79" x="-19.5" y="62" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="rel_13" plantUmlBaseStyle="endArrow=block;endFill=1;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="SGYwsJkY14Erd2L5TeL--15">
+          <mxCell edge="1" parent="SGYwsJkY14Erd2L5TeL--1" source="SGYwsJkY14Erd2L5TeL--10" style="endArrow=block;endFill=1;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="SGYwsJkY14Erd2L5TeL--6">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="rel_14" plantUmlBaseStyle="endArrow=block;endFill=1;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="SGYwsJkY14Erd2L5TeL--16">
+          <mxCell edge="1" parent="SGYwsJkY14Erd2L5TeL--1" source="SGYwsJkY14Erd2L5TeL--10" style="endArrow=block;endFill=1;strokeColor=#4F6D8A;fontColor=#000000;fontSize=13;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontFamily=Arial;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" target="SGYwsJkY14Erd2L5TeL--8">
+            <mxGeometry relative="1" as="geometry">
+              <Array as="points">
+                <mxPoint x="70" y="376" />
+                <mxPoint x="844.5" y="376" />
+              </Array>
+            </mxGeometry>
+          </mxCell>
+        </UserObject>
+        <UserObject label="Medical Representative - AI Visit Planning &amp;amp; Pre-Call Advisory" plantUmlId="title_0" plantUmlBaseStyle="text;html=1;fillColor=none;strokeColor=none;fontSize=14;fontStyle=1;fontColor=#000000;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;" plantUmlBaseValue="Medical Representative - AI Visit Planning &amp;amp; Pre-Call Advisory" id="SGYwsJkY14Erd2L5TeL--19">
+          <mxCell parent="SGYwsJkY14Erd2L5TeL--1" style="text;html=1;fillColor=none;strokeColor=none;fontSize=14;fontStyle=1;fontColor=#000000;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;" vertex="1">
+            <mxGeometry height="24" width="463" x="287.75" y="36" as="geometry" />
+          </mxCell>
+        </UserObject>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
