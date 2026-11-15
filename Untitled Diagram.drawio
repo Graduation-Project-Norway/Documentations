@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net">
   <diagram name="Page-1" id="BCV-VYC_t0sv1SuXaNTb">
-    <mxGraphModel dx="2091" dy="677" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2118" dy="749" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -143,7 +143,7 @@
         </UserObject>
         <UserObject label="Medical Representative - Promotional Inventory &amp;amp; Gift Management" plantUmlId="title_0" plantUmlBaseStyle="text;html=1;fillColor=none;strokeColor=none;fontSize=14;fontStyle=1;fontColor=#000000;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;" plantUmlBaseValue="Medical Representative - Promotional Inventory &amp;amp; Gift Management" id="8Xc3hnH6fMIMHupg4c5Y-29">
           <mxCell parent="8Xc3hnH6fMIMHupg4c5Y-1" style="text;html=1;fillColor=none;strokeColor=none;fontSize=14;fontStyle=1;fontColor=#000000;align=center;verticalAlign=middle;whiteSpace=wrap;fontFamily=Arial;" vertex="1">
-            <mxGeometry height="24" width="500" x="323.25" y="30" as="geometry" />
+            <mxGeometry height="24" width="500" x="180" y="30" as="geometry" />
           </mxCell>
         </UserObject>
       </root>
